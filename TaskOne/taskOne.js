@@ -1,13 +1,20 @@
 
 //a)
 
-function getText(text){
+function splitText(text){
     let myArray=text.split("\n")
-    myArray.pop()
-    return myArray
+    // myArray.pop()
+    
+    let cleanArray = []
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] != "") {
+            cleanArray.push(myArray[i])
+        }
+    }
+    return cleanArray
 }
 
-console.log(getText("A\nB\nC\n"))
+console.log(splitText("A\nB\nC\n"))
 
 //returns [ 'A', 'B', 'C' ]
 
