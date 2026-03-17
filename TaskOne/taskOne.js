@@ -1,5 +1,4 @@
-
-//a)
+// ==========[ Task 1a ]==========
 
 function splitText(text){
     let myArray=text.split("\n")
@@ -15,10 +14,9 @@ function splitText(text){
 }
 
 console.log(splitText("A\nB\nC\n"))
-
 //returns [ 'A', 'B', 'C' ]
 
-//b)
+// ==========[ Task 1b ]==========
 
 function getValue(value){
     let myArray=[]
@@ -31,8 +29,9 @@ function getValue(value){
 }
 
 console.log(getValue(["1.2", "-3.4", "5.6"]))
-
 //returns [ 1.2, -3.4, 5.6 ]
+
+// ==========[ Task 1c ]==========
 
 function sumElements(array){
     let myArray=[]
