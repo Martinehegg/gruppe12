@@ -2,21 +2,24 @@
 
 function splitText(text) {
     let myArray = text.split("\n")
-    // myArray.pop()
+    return myArray
+}
 
+function removeEmptyStr(array) {
     let cleanArray = []
-    for (let i = 0; i < myArray.length; i++) {
-        if (myArray[i] != "") {
-            cleanArray.push(myArray[i])
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] != "") {
+            cleanArray.push(array[i])
         }
     }
     return cleanArray
 }
 
-console.log(splitText("A\nB\nC\n"))
+console.log(removeEmptyStr(splitText("A\nB\nC\n")))
 //returns [ 'A', 'B', 'C' ]
 
 // ==========[ Task 1b ]==========
+let strNumArray = ["1.2", "-3.4", "5.6", "3.5", "5", "1.2", "2.3"]
 
 function strToNum(value) {
     let myArray = []
@@ -27,8 +30,9 @@ function strToNum(value) {
     return myArray
 }
 
-console.log(strToNum(["1.2", "-3.4", "5.6"]))
-//returns [ 1.2, -3.4, 5.6 ]
+let numArray = strToNum(strNumArray)
+console.log(numArray)
+//returns [1.2, -3.4, 5.6, 3.5, 5, 1.2, 2.3]
 
 // ==========[ Task 1c ]==========
 
@@ -46,6 +50,10 @@ const calculateSumOfPairs = (array) => {
     return myArray
 }
 
+let sumOfPairs = calculateSumOfPairs(numArray)
+console.log(sumOfPairs)
+// returns [-2.2, 9.1, 6.2]
+
 const displaySumOfPairs = (array) => {
     for (let i = 0; i < array.length; i ++) {
         document.getElementById("sumArray").innerHTML += `
@@ -54,6 +62,5 @@ const displaySumOfPairs = (array) => {
     }
 }
 
-let numArray = [2, 4, 6, 9, 2, 5, 6]
-displaySumOfPairs(calculateSumOfPairs(numArray))
+displaySumOfPairs(sumOfPairs)
 
