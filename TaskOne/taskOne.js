@@ -18,17 +18,16 @@ console.log(splitText("A\nB\nC\n"))
 
 // ==========[ Task 1b ]==========
 
-function getValue(value){
+function strToNum(value){
     let myArray=[]
 
     for(let i=0; i<value.length; i++){
         myArray.push(Number(value[i]))
     }
     return myArray
-
 }
 
-console.log(getValue(["1.2", "-3.4", "5.6"]))
+console.log(strToNum(["1.2", "-3.4", "5.6"]))
 //returns [ 1.2, -3.4, 5.6 ]
 
 // ==========[ Task 1c ]==========
