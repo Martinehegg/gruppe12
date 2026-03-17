@@ -34,15 +34,20 @@ console.log(strToNum(["1.2", "-3.4", "5.6"]))
 
 function sumElements(array){
     let myArray=[]
-    for(let i=0; i<array.length; i+=2){
+    let isEven = 0
+
+    if (array.length % 2 != 0) {
+        isEven = 1
+    }
+
+    for(let i=0; i<array.length - isEven; i+=2){
         myArray.push(array[i]+array[i+1])
         document.getElementById("sumArray").innerHTML+=`
         <li>${array[i]+array[i+1]}</li>
         `
     }
-    return myArray
 }
 
-console.log(sumElements([ 2, 4, 6, 9, 2, 5, 6]))
+console.log(sumElements([2, 4, 6, 9, 2, 5, 6]))
 
 
