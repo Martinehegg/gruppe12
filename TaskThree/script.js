@@ -54,7 +54,7 @@ Removed s frome moles in //2
 
 Fixed the miss spelled word length in moles.length
 
-Removed = from the for loop at the bottom. This for loop will search for mole[5] wich does not exist.
+Removed = from the for loop at the bottom. This for loop will search for mole[3] wich does not exist.
 
 Made the game possible to reset with changing the start button text from updating the score to say Reset.
 Also made a new variable gameInterval to be able to clear the game. 
