@@ -11,16 +11,12 @@ lines it contains. For example, if your function receives the text value `A\nB\n
 `["A", "B", "C"]`. 
 (Check split methods of strings in javascript.)
 
-**The following sources were used to complete Task 1a:**
-
 
 ### b)
 Write a function that takes a list of text values (all of which represent numbers),
 and returns the list consisting of the corresponding numbers. For example, if your
 function receives the text values `["1.2", "-3.4", "5.6"]`, then your function should
 return the list `[1.2, -3.4, 5.6]`.
-
-**The following source was used to complete Task 1b:**
 
 
 ### c)
@@ -29,9 +25,6 @@ function in the previous task, computes the sum of each pair of elements
 (e.g., `first+second`, `second+third`, `third+fourth`), and displays all of them on the
 web page to the user. Here, you can use an ordered or unordered list (ol or ul elements)
 or, for example, a table element.
-
-**The following source was used to complete Task 1c:**
-
 
 ---
 
