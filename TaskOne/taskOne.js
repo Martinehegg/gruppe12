@@ -1,43 +1,66 @@
+// ==========[ Task 1a ]==========
 
-//a)
-
-function getText(text){
-    let myArray=text.split("\n")
-    myArray.pop()
+function splitText(text) {
+    let myArray = text.split("\n")
     return myArray
 }
 
-console.log(getText("A\nB\nC\n"))
+function removeEmptyStr(array) {
+    let cleanArray = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] != "") {
+            cleanArray.push(array[i])
+        }
+    }
+    return cleanArray
+}
 
+console.log(removeEmptyStr(splitText("A\nB\nC\n")))
 //returns [ 'A', 'B', 'C' ]
 
-//b)
+// ==========[ Task 1b ]==========
+let strNumArray = ["1.2", "-3.4", "5.6", "3.5", "5", "1.2", "2.3"]
 
-function getValue(value){
-    let myArray=[]
+function strToNum(value) {
+    let myArray = []
 
-    for(let i=0; i<value.length; i++){
+    for (let i = 0; i < value.length; i++) {
         myArray.push(Number(value[i]))
     }
     return myArray
-
 }
 
-console.log(getValue(["1.2", "-3.4", "5.6"]))
+let numArray = strToNum(strNumArray)
+console.log(numArray)
+//returns [1.2, -3.4, 5.6, 3.5, 5, 1.2, 2.3]
 
-//returns [ 1.2, -3.4, 5.6 ]
+// ==========[ Task 1c ]==========
 
-function sumElements(array){
-    let myArray=[]
-    for(let i=0; i<array.length; i+=2){
-        myArray.push(array[i]+array[i+1])
-        document.getElementById("sumArray").innerHTML+=`
-        <li>${array[i]+array[i+1]}</li>
-        `
+const calculateSumOfPairs = (array) => {
+    let myArray = []
+    let isEven = 0
+
+    if (array.length % 2 != 0) {
+        isEven = 1
+    }
+
+    for (let i = 0; i < array.length - 1; i += 2) {
+        myArray.push(array[i] + array[i + 1])
     }
     return myArray
 }
 
-console.log(sumElements([ 2, 4, 6, 9, 2, 5, 6]))
+let sumOfPairs = calculateSumOfPairs(numArray)
+console.log(sumOfPairs)
+// returns [-2.2, 9.1, 6.2]
 
+const displaySumOfPairs = (array) => {
+    for (let i = 0; i < array.length; i ++) {
+        document.getElementById("sumArray").innerHTML += `
+        <li>${array[i]}</li>
+        `
+    }
+}
+
+displaySumOfPairs(sumOfPairs)
 
